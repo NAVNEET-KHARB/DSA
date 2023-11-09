@@ -7,8 +7,9 @@ void printArray(int *A, int n)
     }
     printf("\n");
 }
+// For ascending order
 // Non-Adaptive
-// void bubblesort(int *A, int n)
+// void bubbleSortA(int *A, int n)
 // {
 //     int temp;
 //     for (int i = 0; i < n - 1; i++) // no. of passes
@@ -25,7 +26,7 @@ void printArray(int *A, int n)
 //     }
 // }
 // Adaptive
-void bubblesort(int *A, int n)
+void bubbleSortA(int *A, int n)
 {
     int temp;
     int isSorted = 0;
@@ -49,13 +50,37 @@ void bubblesort(int *A, int n)
         }
     }
 }
+void bubbleSortD(int *A, int n)
+{
+    int temp;
+    int isSorted = 0;
+    for (int i = 0; i < n - 1; i++)
+    {
+        isSorted = 1;
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            if (A[j] < A[j + 1])
+            {
+                temp = A[j];
+                A[j] = A[j + 1];
+                A[j + 1] = temp;
+                isSorted = 0;
+            }
+            if (isSorted)
+            {
+                return;
+            }
+        }
+    }
+}
 int main()
 {
     // int a[] = {12, 54, 65, 7, 23, 9};
     int a[] = {11, 22, 33, 44, 55, 66};
     int n = 6;
     printArray(a, n);
-    bubblesort(a, n);
+    // bubbleSortA(a, n);
+    bubbleSortD(a, n);
     printArray(a, n);
     return 0;
 }
