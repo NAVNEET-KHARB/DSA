@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Satvik/Desktop/DSA",
-      "program": "c:/Users/Satvik/Desktop/DSA/build/Debug/outDebug",
+      "cwd": "c:/Users/DELL/Desktop/DSA",
+      "program": "c:/Users/DELL/Desktop/DSA/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
