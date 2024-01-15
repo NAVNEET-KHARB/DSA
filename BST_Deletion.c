@@ -65,7 +65,7 @@ struct Node *deletionBST(struct Node *root, int value)
     {
         return NULL;
     }
-    else if (root->left == NULL && root->right == NULL)
+    else if (root->left == NULL && root->right == NULL && root->data == value)
     {
         free(root);
         return NULL;
